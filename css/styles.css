@@ -1,0 +1,421 @@
+/* Imports */
+
+
+/* Reseteo de valores */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Configuración de variables */
+:root{
+    --primary-color: #003153;
+    --primary-color-t: #00305373;
+    --secondary-color: #d35400;
+    --accent-color: #28a745;
+    --white: #f3f3f3;
+    --black: #000010;
+    --gray: #c4c4c4;
+}
+
+/* Estilos del body */
+body{
+    background-color: var(--white);
+    color: var(--primary-color);
+    scrollbar-color:  var(--gray) transparent; /* Chrome,Safari,Opera */
+    overflow-y: auto;     /* Chrome,Safari,Opera */
+}
+
+/* Generales */
+h1{
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 30px 0;
+}
+
+header, footer{
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+hr{
+    border: 1px solid var(--primary-color-t);
+    margin: 20px auto;
+    max-width: 90%;
+
+}
+
+/* Estilos del header */
+header{
+    height: 15vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    nav{
+        height: 100%; /* Altura = 100% de su padre */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a{
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+            column-gap: 20px;
+            a{
+                font-size: 1.2rem;
+
+                &:hover{
+                    transition: all .3s ease-in-out;
+                    text-shadow: var(--secondary-color) 0.1em 0.1em 0.1em;
+                }
+            }
+        }
+    }
+}
+
+/* Estilos de la sección principal */
+.seccionPrincipal{
+    height: 85vh;
+    background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,49,83,0.12648809523809523) 100%), url("../assets/img/landing/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contenedorTitulos{
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+
+        width:fit-content;
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+
+        a{
+            margin-top: 10px;
+            display: inline-block;
+            color: var(--white);
+            text-decoration: none;
+            border: 1px solid var(--white);
+            border-radius: 5px;
+            padding: 10px;
+            transition: all .3s ease-in-out;
+
+            
+            &:hover{
+                transform: scale(1.2);
+                background-color: var(--secondary-color);
+                box-shadow: outset 0 0 10px rgba(0,0,0,.7), 0 0 20px rgba(0,0,0,.7);
+            }
+        }
+    }
+}
+
+/* Estilos Qué vemos hoy */
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+
+    margin: 30px auto;
+
+    .buscar{
+        width: 85%;
+        height: 70px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        input{
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid var(--primary-color-t);
+        }
+
+        .busqueda{
+            border: 1px solid var(--primary-color);
+        }
+
+        .submit{
+            max-width: 15%;
+            cursor: pointer;
+
+            &:hover{
+                background-color: var(--primary-color);
+                color: var(--white);
+                box-shadow: inset 0 0 10px rgba(0,0,0,.7), 0 0 20px rgba(0,0,0,.7);
+                transition: all.3s ease-in-out;
+            }
+        }
+    }
+
+}
+
+/* Tendencias */
+.tendenciasPeliculas{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+
+    h2{
+        margin: 30px 0;
+    }
+
+
+    .galeriaTendencias{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        margin-bottom: 50px;
+
+
+        div{
+            width: 250px;
+            height: 350px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                border-radius: 5px;
+                box-shadow: 0 0 10px var(--primary-color-t), 0 0 20px var(--primary-color-t);
+            }
+        }
+    }
+
+    button{
+        transform: scale(1.2);
+        color: var(--secondary-color);
+        box-shadow: outset 0 0 10px rgba(0,0,0,.7), 0 0 20px rgba(0,0,0,.7);
+    }
+}
+
+/* Mejor puntuadas */
+.puntuadasPeliculas{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+
+    h2{
+        margin: 30px 0;
+    }
+
+
+    .galeriaPuntuadas{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0px 0px 40px 0px;
+
+        div{
+            border-radius: 25px;
+            width: 170px;
+            min-width: 170px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            img{
+                width: 95%;
+                height: 95%;
+                object-fit: cover;
+
+                border-radius: 5%;
+            }
+        }
+    }
+}
+
+footer{
+    height: 15vh;
+    bottom: 0;
+    width: 100%;
+
+    nav{
+        height: 100%; /* Altura = 100% de su padre */
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a{
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+            column-gap: 50px;
+            a{
+                font-size: 1.2rem;
+
+                &:hover{
+                    transition: all .3s ease-in-out;
+                    text-shadow: var(--gray) 0.1em 0.1em 0.1em;
+                }
+            }
+        }
+    }
+
+    .up-button{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        box-shadow: 0 0 10px var(--primary-color-t), 0 0 20px var(--primary-color-t);
+        border-radius: 50%;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+/* Estilos detalle.html */
+.mainDetalle{
+    .detalle{
+        padding-top:50px;
+        background:linear-gradient(to right top, #6d6969a7, #6d6969a7),url("../assets/img/wonka.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+
+        .contenedorDetalle{
+            width:75%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 60px;
+
+            img{
+              border-radius: 20px;
+              border: 2px solid var(--white);
+              box-shadow: outset 0 0 20px rgba(0,0,0,.7), 0 0 30px rgba(0,0,0,.7);
+            }
+
+            .textoDetalle{
+                color: var(--white);
+
+                h1{
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+
+                h2{
+                    font-size: 1.7rem;
+                    margin-top:30px;
+                }
+
+                .contenedorCreditos{
+                    margin-top:10px;
+                    display: flex;
+                    justify-content:space-between;
+                }
+            }
+        }
+        
+        
+       
+    }
+
+    .trailer{
+        padding-top:100px;
+        padding-bottom: 80px;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 70px;
+    }
+
+}
+
+/* Estilos iniciarsesion.html */
+.mainSignUp{
+    text-align: center;
+    
+    .formDatos{
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 60px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0px 0px 40px 0px;
+    
+        label{
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--primary-color);
+        }
+    
+        input{
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid var(--primary-color-t);
+            outline: none;
+        }
+    
+        .button{
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 0 5px var(--primary-color-t), 0 0 10px var(--primary-color-t);
+            width: 20%;
+            cursor: pointer;
+    
+            &:hover{
+                transition: all .3s ease-in-out;
+                background-color: var(--primary-color-t);
+                box-shadow: 0 0 10px var(--primary-color-t), 0 0 20px var(--primary-color-t);
+            }
+        }
+    }
+}
