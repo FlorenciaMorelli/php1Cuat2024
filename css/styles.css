@@ -98,11 +98,11 @@ header{
 
     .contenedorTitulos{
         backdrop-filter: blur(10px);
-        border-radius: 5px;
+        border-radius: 10px;
 
-        width: 50%;
+        width:fit-content;
         margin: 0 auto;
-        padding: 5px;
+        padding: 10px;
         text-align: center;
 
         a{
@@ -133,7 +133,7 @@ header{
     text-align: center;
 
     h2{
-        margin: 20px 0;
+        margin: 30px 0;
     }
 
 
@@ -178,7 +178,7 @@ header{
     margin-bottom: 60px;
 
     h2{
-        margin: 20px 0;
+        margin: 30px 0;
     }
 
 
@@ -256,4 +256,65 @@ footer{
         height: auto;
         cursor: pointer;
     }
+}
+
+/*ESTILOS ESCRITORIO Detalle Mario*/
+.mainDetalle{
+    .detalle{
+        padding-top:50px;
+        background:linear-gradient(to right top, #6d6969a7, #6d6969a7),url("../assets/img/wonka.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+
+        .contenedorDetalle{
+            width:75%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 60px;
+
+            img{
+              border-radius: 20px;
+              border: 2px solid var(--white);
+              box-shadow: outset 0 0 20px rgba(0,0,0,.7), 0 0 30px rgba(0,0,0,.7);
+            }
+
+            .textoDetalle{
+                color: var(--white);
+
+                h1{
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+
+                h2{
+                    font-size: 1.7rem;
+                    margin-top:30px;
+                }
+
+                .contenedorCreditos{
+                    margin-top:10px;
+                    display: flex;
+                    justify-content:space-between;
+                }
+            }
+        }
+        
+        
+       
+    }
+
+    .trailer{
+        padding-top:100px;
+        padding-bottom: 80px;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 70px;
+    }
+
 }
