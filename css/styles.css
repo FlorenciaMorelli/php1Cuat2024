@@ -52,7 +52,23 @@ hr{
     border: 1px solid var(--primary-color-t);
     margin: 20px auto;
     max-width: 90%;
+}
 
+/* Media queries generales */
+@media (max-width: 768px){
+    h1{
+        font-size: 3rem;
+        margin: 10px;
+    }
+
+    h2{
+        font-size: 2rem;
+        margin: 10px;
+    }
+    
+    hr{
+        margin: 10px auto;
+    }
 }
 
 /* Estilos del header */
@@ -84,6 +100,42 @@ header{
                 &:hover{
                     transition: all .3s ease-in-out;
                     text-shadow: var(--secondary-color) 0.1em 0.1em 0.1em;
+                }
+            }
+        }
+    }
+}
+
+/* Media queries header */
+@media (max-width: 768px){
+    header{
+        height: fit-content;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    
+        nav{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+    
+            a{
+                font-size: 1.7rem;
+            }
+    
+            ul{
+                list-style: none;
+                display: flex;
+                column-gap: 20px;
+                a{
+                    font-size: 1rem;
+    
+                    &::after{
+                        transition: all .3s ease-in-out;
+                        text-shadow: var(--secondary-color) 0.1em 0.1em 0.1em;
+                    }
                 }
             }
         }
@@ -125,6 +177,22 @@ header{
             
             &:hover{
                 transform: scale(1.2);
+                background-color: var(--secondary-color);
+                box-shadow: outset 0 0 10px rgba(0,0,0,.7), 0 0 20px rgba(0,0,0,.7);
+            }
+        }
+    }
+}
+
+/* Media queries de la sección principal */
+@media (max-width: 768px){
+    .seccionPrincipal{
+        .contenedorTitulos{
+            a{
+                margin-bottom: 10px;
+                font-size: 1rem;
+                color: var(--primary-color);
+                border-color: var(--primary-color);
                 background-color: var(--secondary-color);
                 box-shadow: outset 0 0 10px rgba(0,0,0,.7), 0 0 20px rgba(0,0,0,.7);
             }
@@ -178,6 +246,28 @@ header{
 
 }
 
+/* Media queries de Qué vemos hoy */
+@media (max-width: 768px){
+    .search{    
+        margin: 20px auto;
+    
+        .buscar{
+            width: 90%;
+            gap: 5px;
+    
+            .submit{
+                &::after{
+                    background-color: var(--primary-color);
+                    color: var(--white);
+                    box-shadow: inset 0 0 10px rgba(0,0,0,.7), 0 0 20px rgba(0,0,0,.7);
+                    transition: all.3s ease-in-out;
+                }
+            }
+        }
+    
+    }
+}
+
 /* Tendencias */
 .tendenciasPeliculas{
     width: 85%;
@@ -212,11 +302,26 @@ header{
             }
         }
     }
+}
 
-    button{
-        transform: scale(1.2);
-        color: var(--secondary-color);
-        box-shadow: outset 0 0 10px rgba(0,0,0,.7), 0 0 20px rgba(0,0,0,.7);
+/* Media queries de Tendencias */
+@media (max-width: 768px){
+    .tendenciasPeliculas{
+        width: 90%;    
+    
+        .galeriaTendencias{
+            gap: 10px;
+            margin-bottom: 50px;
+            
+            div{
+                width: 170px;
+                height: 250px;
+
+                img{
+                    box-shadow: 0 0 5px var(--primary-color-t), 0 0 10px var(--primary-color-t);
+                }
+            }
+        }
     }
 }
 
@@ -264,10 +369,30 @@ header{
     }
 }
 
+/* Media queries de Mejores puntuadas */
+@media (max-width: 768px){
+    .puntuadasPeliculas{
+        width: 90%;
+    
+        .galeriaPuntuadas{
+            padding: 0px 0px 10px 0px;
+    
+            div{
+                border-radius: 25px;
+                width: 130px;
+                min-width: 130px;
+                cursor: pointer;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
 footer{
     height: 15vh;
-    bottom: 0;
     width: 100%;
+    position: relative;
+    bottom: 0;
 
     nav{
         height: 100%; /* Altura = 100% de su padre */
@@ -306,6 +431,32 @@ footer{
         border-radius: 50%;
         height: auto;
         cursor: pointer;
+    }
+}
+
+/* Media queries del Footer */
+@media (max-width: 768px){
+    footer{
+        height: fit-content;
+    
+        nav{    
+            a{
+                font-size: 1rem;
+            }
+    
+            ul{
+                column-gap: 30px;
+                a{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    
+        .up-button{
+            bottom: 20px;
+            right: 10px;
+            width: 30px;
+        }
     }
 }
 
@@ -370,16 +521,60 @@ footer{
 
 }
 
+/* Media queries de Detalles */
+@media (max-width: 768px){
+    .mainDetalle{
+        .detalle{
+            max-height: 50vh;
+
+            .contenedorDetalle{
+                width: 90%;
+                justify-content: space-between;
+                align-items: flex-start;
+    
+                img{
+                    max-height: 30vh;
+                    position: relative;
+                    top: 5vh;
+                }
+    
+                .textoDetalle{    
+                    h1{
+                        font-size: 1.5rem;
+                    }
+    
+                    h2{
+                        font-size: 1.2rem;
+                    }
+    
+                    .contenedorCreditos{
+                        justify-content: space-between;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    
+        .trailer{
+            padding: 20px 0;
+            width: 90%;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    
+    }
+}
+
 /* Estilos iniciarsesion.html */
 .mainSignUp{
     text-align: center;
+    margin-bottom: 30px;
     
     .formDatos{
         width: 40%;
         margin: 0 auto;
         text-align: center;
-        margin-top: 10px;
-        margin-bottom: 60px;
+        margin-top: 30px;
     
         display: flex;
         flex-direction: column;
@@ -418,4 +613,44 @@ footer{
             }
         }
     }
+}
+
+.irAlOtro{
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    gap: 3px;
+}
+
+/* Media queries de formularios */
+@media (max-width: 768px){
+    .mainSignUp{        
+        .formDatos{
+            width: 80%;
+            gap: 15px;
+        
+            label{
+                font-size: 1rem;
+            }
+        
+            .button{
+                width: fit-content;
+                padding: 10px;
+        
+                &::after{
+                    transition: all .3s ease-in-out;
+                    background-color: var(--primary-color-t);
+                    box-shadow: 0 0 10px var(--primary-color-t), 0 0 20px var(--primary-color-t);
+                }
+            }
+        }
+    }
+
+    .irAlOtro{
+        font-size: 0.8rem;
+        gap: 2px;
+    }
+    
 }
