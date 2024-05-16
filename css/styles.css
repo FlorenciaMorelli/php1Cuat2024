@@ -654,3 +654,52 @@ footer{
     }
     
 }
+
+/* Estilos prices.html */
+.mainPrices{
+    text-align: center;
+    margin-bottom: 30px;
+
+    .contenedorPlanes{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0px 0px 40px 0px;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 30px;
+
+        .plan{
+            width: 30%;
+            height: 300px;
+            border: var(--primary-color);
+            border-radius: 20px;
+            box-shadow: 0 0 10px var(--primary-color-t), 0 0 20px var(--primary-color-t);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 0px 0px 40px 0px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                box-shadow: 0 0 20px var(--primary-color-t), 0 0 30px var(--primary-color-t);
+            }
+        }
+
+        .plan.seleccion{
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: var(--primary-color);
+            box-shadow: 0 0 5px var(--primary-color-t), 0 0 10px var(--primary-color-t);
+            transition: all .3s ease-in-out;
+            &:hover{
+                box-shadow: 0 0 10px var(--primary-color-t), 0 0 20px var(--primary-color-t);
+            }
+        }
+    }
+}
