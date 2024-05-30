@@ -282,7 +282,7 @@ header{
 
     .galeriaTendencias{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: stretch;
         gap: 20px;
         flex-wrap: wrap;
