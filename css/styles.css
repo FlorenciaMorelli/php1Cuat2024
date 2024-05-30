@@ -317,7 +317,7 @@ header{
             div{
                 width: 170px;
                 height: 250px;
-
+              
                 img{
                     box-shadow: 0 0 5px var(--primary-color-t), 0 0 10px var(--primary-color-t);
                 }
