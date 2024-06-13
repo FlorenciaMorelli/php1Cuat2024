@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    
+        <link rel="stylesheet" href="../css/styles.css">
+    
+        <title>Administrador | Streammovies - Florencia Morelli</title>
+    </head>
+<body>
+    <header>
+        <nav>
+            <a href="#">
+                <span>Streammovies</span>
+            </a>
+            <ul>
+                <li><a onclick="adminPeliculas()">Películas</a></li>
+                <!-- <li><a onclick="adminPlanes()">Planes y precios</a></li>
+                <li><a onclick="adminUsuarios()">Planes y precios</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main class="mainAdmin" id="mainAdmin">
+        <div id="adminPeliculas">
+            <h2>Listado de películas</h2>
+            <div class="divAdmin">
+                <div id="listadoPeliculas" class="listadoPeliculas">
+                    <table class="tableAdmin">
+                        <thead>
+                            <tr>
+                                <th>ID Película</th>
+                                <th>Título</th>
+                                <th>Sinopsis</th>
+                                <th>Duración (min)</th>
+                                <th>Año</th>
+                                <th>Director</th>
+                                <th>Género</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Ejemplo Título</td>
+                                    <td>Ejemplo Sinopsis</td>
+                                    <td>Ejemplo Duración</td>
+                                    <td>Ejemplo Año</td>
+                                    <td>Ejemplo Director</td>
+                                    <td class="tdGenero">
+                                        <span>Ejemplo Género</span>
+                                        <span>Ejemplo Otro Género</span>
+                                    </td>
+                                    <td>
+                                        <button type="button" (click)="" class="btnEditar">Editar</button>
+                                        <button type="button" (click)="" class="btnBorrar">Borrar</button>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="agregarPelicula" class="agregarPelicula">
+                    <h4>Agregar una película</h4>
+                    <form id="formAgregarPelicula">
+                        <label for="id_pelicula">ID: </label>
+                        <input type="number" id="id_pelicula" name="id_pelicula" required><br>
+        
+                        <label for="titulo_pelicula">Título: </label>
+                        <input type="text" id="titulo_pelicula" name="titulo_pelicula" required><br>    
+        
+                        <label for="sinopsis_pelicula">Sinopsis: </label>
+                        <input type="number" id="sinopsis_pelicula" name="sinopsis_pelicula" required><br>
+        
+                        <label for="duracion_pelicula">Duración: </label>
+                        <input type="number" id="duracion_pelicula" name="duracion_pelicula" required><br>
+        
+                        <label for="anio_pelicula">Año: </label>
+                        <input type="date" id="anio_pelicula" name="anio_pelicula" required><br>
+        
+                        <label for="director_pelicula">Director: </label>
+                        <input type="text" id="director_pelicula" name="director_pelicula" required><br>
+                        
+                        <label for="id_genero_pelicula">Género: </label>
+                        <select name="id_genero_pelicula" id="id_genero_pelicula">
+                            <option value="1">Acción</option>
+                            <option value="2">Animación</option>
+                            <option value="3">Aventura</option>
+                            <option value="4">Bélica</option>
+                            <option value="5">Ciencia ficción</option>
+                            <option value="6">Comedia</option>
+                            <option value="7">Crimen</option>
+                            <option value="8">Documental</option>
+                            <option value="9">Drama</option>
+                            <option value="10">Familia</option>
+                            <option value="11">Fantasía</option>
+                            <option value="12">Historia</option>
+                            <option value="13">Misterio</option>
+                            <option value="14">Música</option>
+                            <option value="15">Película de TV</option>
+                            <option value="16">Romance</option>
+                            <option value="17">Suspense</option>
+                            <option value="18">Terror</option>
+                            <option value="19">Western</option>
+                        </select>
+        
+                        <button type="submit" (click)="">Agregar</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div id="adminPlanes" class="divAdmin">
+            <h2>Planes disponibles</h2>
+            <div id="listadoPlanes">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Plan</th>
+                            <th>Nombre del plan</th>
+                            <th>Precio</th>
+                            <th>Prestaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Ejemplo Nombre</td>
+                                <td>Ejemplo Precio</td>
+                                <td class="tdPrestaciones">
+                                    <span>Ejemplo Prestación</span>
+                                    <span>Ejemplo Otra Prestación</span>
+                                </td>
+                                <td>
+                                    <button type="button" (click)="" class="btnEditar">Editar</button>
+                                    <button type="button" (click)="" class="btnBorrar">Borrar</button>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="agregarPlan">
+                <h2>Agregar una plan</h2>
+                <form id="formAgregarPlan">
+                    <label for="id_plan">ID: </label>
+                    <input type="number" id="id_plan" name="id" required><br>
+    
+                    <label for="nombre_plan">Nombre: </label>
+                    <input type="text" id="nombre_plan" name="nombre_plan" required><br>    
+    
+                    <label for="precio_plan">Precio: </label>
+                    <input type="number" id="precio_plan" name="precio_plan" required><br>
+                   
+                    <label for="id_genero_plan">Prestaciones: </label>
+                    <select multiple name="id_genero_plan" id="id_genero_plan">
+                        <option value="1">Prestación 1</option>
+                        <option value="2">Prestación 2</option>
+                        <option value="3">Prestación 3</option>
+                        <option value="4">Prestación 4</option>
+                        <option value="5">Prestación 5</option>
+                    </select>
+    
+                    <button type="submit" (click)="">Agregar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const peliculas = document.getElementById('adminPeliculas');
+        const planes = document.getElementById('adminPlanes');
+        const usuarios = document.getElementById('adminUsuarios');
+
+        function adminPeliculas(){
+            peliculas.style.display = 'block';
+            planes.style.display = 'none';
+            usuarios.style.display = 'none';
+        }
+
+        function adminPlanes(){
+            peliculas.style.display = 'none';
+            planes.style.display = 'block';
+            usuarios.style.display = 'none';
+        }
+
+        function adminUsuarios(){
+            peliculas.style.display = 'none';
+            planes.style.display = 'none';
+            usuarios.style.display = 'block';
+        }
+
+        peliculas.style.display = 'block';
+        planes.style.display = 'none';
+        usuarios.style.display = 'none';
+    </script>
+</body>
+</html>
